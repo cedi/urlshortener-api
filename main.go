@@ -39,11 +39,11 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/go-logr/logr"
 
-	v1alpha1 "github.com/cedi/urlshortener-api/api/v1alpha1"
 	shortlinkClient "github.com/cedi/urlshortener-api/pkg/client"
 	urlshortenerController "github.com/cedi/urlshortener-api/pkg/controller"
 	"github.com/cedi/urlshortener-api/pkg/observability"
 	router "github.com/cedi/urlshortener-api/pkg/router"
+	"github.com/cedi/urlshortener/api/v1alpha1"
 	//+kubebuilder:scaffold:imports
 )
 

@@ -249,7 +249,7 @@ update-gomod:
 
 .PHONE: swag
 swag:
-	swag init
+	swag init --parseDependency --generalInfo pkg/router/router.go
 
 .PHONY: full
 full: manifests generate docker-build docker-push deploy restart

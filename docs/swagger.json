@@ -1,20 +1,8 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "A url shortener, written in Go running on Kubernetes",
-        "title": "URL Shortener",
-        "contact": {
-            "name": "Cedric Kienzler",
-            "url": "cedi.dev",
-            "email": "urlshortener-api@cedi.dev"
-        },
-        "license": {
-            "name": "Apache 2.0",
-            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
-        },
-        "version": "1.0"
+        "contact": {}
     },
-    "basePath": "/",
     "paths": {
         "/api/v1/shortlink/": {
             "get": {

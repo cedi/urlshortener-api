@@ -4,7 +4,7 @@ import (
 	"context"
 	"os"
 
-	"github.com/cedi/urlshortener-api/api/v1alpha1"
+	"github.com/cedi/urlshortener/api/v1alpha1"
 	"github.com/go-logr/logr"
 	"github.com/pkg/errors"
 	"go.opentelemetry.io/otel/attribute"
