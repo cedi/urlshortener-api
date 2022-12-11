@@ -1,0 +1,53 @@
+.card {
+    margin: auto;
+    width: 400px;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: rgba(1, 1, 1, 0.7);
+    text-align: center;
+    box-shadow: 0 0 16px 0 rgba(136, 136, 136, 0.2);
+}
+
+.content {
+    padding: 16px;
+}
+
+.icon {
+    height: 64px;
+    width: 64px;
+    margin: 32px 0;
+}
+
+.progress {
+    width: 100%;
+    height: 56px;
+    background: radial-gradient(circle at bottom left, #44C1ED, #16a6e9);
+    animation: animateBg 5s linear infinite;
+}
+
+.progress::before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    animation: animateHex 5s linear infinite;
+    background-size: 10em;
+    background-image: #000000;
+}
+
+h1 {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+p {
+    padding: 0 48px;
+    margin-top: 0;
+}
+
+a {
+    color: #16a6e9;
+    text-decoration: none;
+}

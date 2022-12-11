@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: urlshortener-api
+spec:
+  selector:
+    control-plane: urlshortener-api
+  ports:
+    - port: 8123

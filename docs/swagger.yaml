@@ -1,0 +1,233 @@
+basePath: /
+definitions:
+  controller.ShortLink:
+    properties:
+      name:
+        type: string
+      spec:
+        $ref: '#/definitions/v1alpha1.ShortLinkSpec'
+      status:
+        $ref: '#/definitions/v1alpha1.ShortLinkStatus'
+    type: object
+  v1alpha1.ShortLinkSpec:
+    properties:
+      after:
+        description: |-
+          RedirectAfter specifies after how many seconds to redirect (Default=3)
+          +kubebuilder:default:=0
+          +kubebuilder:validation:Minimum=0
+          +kubebuilder:validation:Maximum=99
+        type: integer
+      code:
+        description: |-
+          Code is the URL Code used for the redirection.
+          leave on default (307) when using the HTML behavior. However, if you whish to use a HTTP 3xx redirect, set to the appropriate 3xx status code
+          +kubebuilder:validation:Enum=200;300;301;302;303;304;305;307;308
+          +kubebuilder:default:=307
+        enum:
+        - 307
+        - 200
+        - 300
+        - 301
+        - 302
+        - 303
+        - 304
+        - 305
+        - 308
+        type: integer
+      target:
+        description: |-
+          Target specifies the target to which we will redirect
+          +kubebuilder:validation:Required
+          +kubebuilder:validation:MinLength=1
+        type: string
+    type: object
+  v1alpha1.ShortLinkStatus:
+    properties:
+      count:
+        description: |-
+          Count represents how often this ShortLink has been called
+          +kubebuilder:default:=0
+          +kubebuilder:validation:Minimum=0
+        type: integer
+    type: object
+info:
+  contact:
+    email: urlshortener-api@cedi.dev
+    name: Cedric Kienzler
+    url: cedi.dev
+  description: A url shortener, written in Go running on Kubernetes
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: URL Shortener
+  version: "1.0"
+paths:
+  /api/v1/shortlink/:
+    get:
+      description: list shortlinks
+      produces:
+      - text/plain
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            items:
+              $ref: '#/definitions/controller.ShortLink'
+            type: array
+        "404":
+          description: NotFound
+          schema:
+            type: integer
+        "500":
+          description: InternalServerError
+          schema:
+            type: integer
+      summary: list shortlinks
+      tags:
+      - api/v1/
+  /api/v1/shortlink/{shortlink}:
+    delete:
+      description: delete shortlink
+      parameters:
+      - description: the shortlink URL part (shortlink id)
+        example: home
+        in: path
+        name: shortlink
+        required: true
+        type: string
+      produces:
+      - text/plain
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: integer
+        "404":
+          description: NotFound
+          schema:
+            type: integer
+        "500":
+          description: InternalServerError
+          schema:
+            type: integer
+      summary: delete shortlink
+      tags:
+      - api/v1/
+    get:
+      description: get a shortlink
+      parameters:
+      - description: the shortlink URL part (shortlink id)
+        example: home
+        in: path
+        name: shortlink
+        type: string
+      produces:
+      - text/plain
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/controller.ShortLink'
+        "404":
+          description: NotFound
+          schema:
+            type: integer
+        "500":
+          description: InternalServerError
+          schema:
+            type: integer
+      summary: get a shortlink
+      tags:
+      - api/v1/
+    post:
+      consumes:
+      - application/json
+      description: create a new shortlink
+      parameters:
+      - description: the shortlink URL part (shortlink id)
+        example: home
+        in: path
+        name: shortlink
+        type: string
+      - description: shortlink spec
+        in: body
+        name: spec
+        required: true
+        schema:
+          $ref: '#/definitions/v1alpha1.ShortLinkSpec'
+      produces:
+      - text/plain
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: integer
+        "301":
+          description: MovedPermanently
+          schema:
+            type: integer
+        "302":
+          description: Found
+          schema:
+            type: integer
+        "307":
+          description: TemporaryRedirect
+          schema:
+            type: integer
+        "308":
+          description: PermanentRedirect
+          schema:
+            type: integer
+        "404":
+          description: NotFound
+          schema:
+            type: integer
+        "500":
+          description: InternalServerError
+          schema:
+            type: integer
+      summary: create new shortlink
+      tags:
+      - api/v1/
+    put:
+      consumes:
+      - application/json
+      description: update a new shortlink
+      parameters:
+      - description: the shortlink URL part (shortlink id)
+        example: home
+        in: path
+        name: shortlink
+        required: true
+        type: string
+      - description: shortlink spec
+        in: body
+        name: spec
+        required: true
+        schema:
+          $ref: '#/definitions/v1alpha1.ShortLinkSpec'
+      produces:
+      - text/plain
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: integer
+        "404":
+          description: NotFound
+          schema:
+            type: integer
+        "500":
+          description: InternalServerError
+          schema:
+            type: integer
+      summary: update existing shortlink
+      tags:
+      - api/v1/
+swagger: "2.0"

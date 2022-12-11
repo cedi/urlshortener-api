@@ -1,0 +1,20 @@
+# permissions for end users to view redirects.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: redirect-viewer-role
+rules:
+- apiGroups:
+  - urlshortener-api.av0.de
+  resources:
+  - redirects
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - urlshortener-api.av0.de
+  resources:
+  - redirects/status
+  verbs:
+  - get

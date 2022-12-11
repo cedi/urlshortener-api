@@ -1,0 +1,5 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- urlshortener-api_v1alpha1_shortlink.yaml
+- urlshortener-api_v1alpha1_redirect.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

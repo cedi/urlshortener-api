@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: urlshortener-api
+  namespace: system
+spec:
+  template:
+    metadata:
+      annotations:
+        sidecar.opentelemetry.io/inject: "true"
+        kubectl.kubernetes.io/default-container: urlshortener-api
+      labels:
+        control-plane: urlshortener-api
+    spec:
+      containers:
+        - name: urlshortener-api
+          args:
+            - "--config=urlshortener-api_config.yaml"
+          volumeMounts:
+            - name: urlshortener-api-config
+              mountPath: /urlshortener-api_config.yaml
+              subPath: urlshortener-api_config.yaml
+      volumes:
+        - name: urlshortener-api-config
+          configMap:
+            name: urlshortener-api-config

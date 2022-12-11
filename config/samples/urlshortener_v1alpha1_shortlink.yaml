@@ -1,0 +1,26 @@
+apiVersion: urlshortener-api.av0.de/v1alpha1
+kind: ShortLink
+metadata:
+  name: shortlink-sample
+spec:
+  alias: "cow"
+  target: "https://openfaas.cedi.dev/function/cows"
+  after: 60
+---
+apiVersion: urlshortener-api.av0.de/v1alpha1
+kind: ShortLink
+metadata:
+  name: shortlink-sample2
+spec:
+  alias: "foobar"
+  target: "https://openfaas.cedi.dev/function/cows"
+  after: 5
+---
+apiVersion: urlshortener-api.av0.de/v1alpha1
+kind: ShortLink
+metadata:
+  name: shortlink-sample3
+spec:
+  alias: "foobar"
+  target: "https://openfaas.cedi.dev/function/cows"
+  after: 5

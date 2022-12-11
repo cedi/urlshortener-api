@@ -1,0 +1,24 @@
+# permissions for end users to edit redirects.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: redirect-editor-role
+rules:
+- apiGroups:
+  - urlshortener-api.av0.de
+  resources:
+  - redirects
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - urlshortener-api.av0.de
+  resources:
+  - redirects/status
+  verbs:
+  - get
