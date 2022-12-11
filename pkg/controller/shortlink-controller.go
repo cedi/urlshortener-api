@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"strings"
 
-	shortlinkClient "github.com/cedi/urlshortener-api/pkg/client"
 	"github.com/cedi/urlshortener-api/pkg/observability"
 	"github.com/cedi/urlshortener/api/v1alpha1"
+	shortlinkClient "github.com/cedi/urlshortener/pkg/client"
 	"github.com/go-logr/logr"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
