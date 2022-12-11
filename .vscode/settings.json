@@ -1,0 +1,17 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "cSpell.words": [
+        "apimachinery",
+        "Gonic",
+        "Kienzler",
+        "kubebuilder",
+        "logr",
+        "Nosniff",
+        "otel",
+        "otelgin",
+        "shortlink",
+        "shortlinks",
+        "swaggo",
+        "urlshortener"
+    ]
+}
