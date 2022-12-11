@@ -10,9 +10,9 @@ spec:
   tls:
     - secretName: short-av0de-tls
       hosts:
-        - short.av0.de
+        - short.cedi.dev
   rules:
-    - host: short.av0.de
+    - host: short.cedi.dev
       http:
         paths:
           - path: /

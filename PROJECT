@@ -1,4 +1,4 @@
-domain: av0.de
+domain: cedi.dev
 layout:
 - go.kubebuilder.io/v3
 plugins:
@@ -11,7 +11,7 @@ resources:
     crdVersion: v1
     namespaced: true
   controller: true
-  domain: av0.de
+  domain: cedi.dev
   group: urlshortener-api
   kind: ShortLink
   path: github.com/cedi/urlshortener-api/api/v1alpha1
@@ -20,7 +20,7 @@ resources:
     crdVersion: v1
     namespaced: true
   controller: true
-  domain: av0.de
+  domain: cedi.dev
   group: urlshortener-api
   kind: Redirect
   path: github.com/cedi/urlshortener-api/api/v1alpha1

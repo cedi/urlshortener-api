@@ -5,7 +5,7 @@ metadata:
   name: shortlink-viewer-role
 rules:
 - apiGroups:
-  - urlshortener-api.av0.de
+  - urlshortener-api.cedi.dev
   resources:
   - shortlinks
   verbs:
@@ -13,7 +13,7 @@ rules:
   - list
   - watch
 - apiGroups:
-  - urlshortener-api.av0.de
+  - urlshortener-api.cedi.dev
   resources:
   - shortlinks/status
   verbs:

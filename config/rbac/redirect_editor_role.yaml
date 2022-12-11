@@ -5,7 +5,7 @@ metadata:
   name: redirect-editor-role
 rules:
 - apiGroups:
-  - urlshortener-api.av0.de
+  - urlshortener-api.cedi.dev
   resources:
   - redirects
   verbs:
@@ -17,7 +17,7 @@ rules:
   - update
   - watch
 - apiGroups:
-  - urlshortener-api.av0.de
+  - urlshortener-api.cedi.dev
   resources:
   - redirects/status
   verbs:

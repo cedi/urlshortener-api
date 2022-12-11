@@ -2,7 +2,7 @@
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
-  name: shortlinks.urlshortener-api.av0.de
+  name: shortlinks.urlshortener-api.cedi.dev
 spec:
   conversion:
     strategy: Webhook

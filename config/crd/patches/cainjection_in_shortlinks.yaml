@@ -4,4 +4,4 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: $(CERTIFICATE_NAMESPACE)/$(CERTIFICATE_NAME)
-  name: shortlinks.urlshortener-api.av0.de
+  name: shortlinks.urlshortener-api.cedi.dev

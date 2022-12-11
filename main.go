@@ -108,7 +108,7 @@ func main() {
 		Port:                          9443,
 		HealthProbeBindAddress:        probeAddr,
 		LeaderElection:                false,
-		LeaderElectionID:              "a9a252fc.av0.de",
+		LeaderElectionID:              "a9a252fc.cedi.dev",
 		LeaderElectionReleaseOnCancel: false,
 	})
 	if err != nil {

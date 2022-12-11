@@ -5,9 +5,9 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.9.0
   creationTimestamp: null
-  name: shortlinks.urlshortener-api.av0.de
+  name: shortlinks.urlshortener-api.cedi.dev
 spec:
-  group: urlshortener-api.av0.de
+  group: urlshortener-api.cedi.dev
   names:
     kind: ShortLink
     listKind: ShortLinkList
