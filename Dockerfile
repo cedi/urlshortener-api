@@ -11,8 +11,6 @@ RUN go mod download
 
 # Copy the go source
 COPY main.go main.go
-COPY api/ api/
-COPY controllers/ controllers/
 COPY pkg/ pkg/
 COPY docs/ docs/
 
@@ -32,6 +30,6 @@ COPY html/ html/
 
 USER 65532:65532
 
-EXPOSE 8123
+EXPOSE 8080
 
-ENTRYPOINT ["/urlshortener-api --bind-address=:8123"]
+ENTRYPOINT ["/urlshortener-api --bind-address=:8080"]
