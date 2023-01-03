@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/MrAlias/flow v0.1.5
-	github.com/cedi/urlshortener v0.0.0-20221229164913-86d1bd824857
+	github.com/cedi/urlshortener v0.0.0-20221229223919-fe48af006758
 	github.com/gin-gonic/contrib v0.0.0-20221130124618-7e01895a63f2
 	github.com/gin-gonic/gin v1.8.2
 	github.com/go-logr/logr v1.2.3
