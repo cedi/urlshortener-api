@@ -78,6 +78,8 @@ github.com/cedi/urlshortener v0.0.0-20230104131225-a3c61ae4acf9 h1:I+6JyldhsEPv/
 github.com/cedi/urlshortener v0.0.0-20230104131225-a3c61ae4acf9/go.mod h1:Dfmfrd82N+csv0xFaASTU85wD5xsYNcH6RD/x+Bi32U=
 github.com/cedi/urlshortener v0.0.0-20230104131751-69e8c95b69ce h1:fcow97or2TFfzXTIFMplfcJURynegDxOl9gAO16dB3E=
 github.com/cedi/urlshortener v0.0.0-20230104131751-69e8c95b69ce/go.mod h1:Dfmfrd82N+csv0xFaASTU85wD5xsYNcH6RD/x+Bi32U=
+github.com/cedi/urlshortener v0.0.0-20230106134510-2842551b59ba h1:zVjPbFY1FXUxGwN1wbfDGYeJyqv16vCFo08nLg/Djag=
+github.com/cedi/urlshortener v0.0.0-20230106134510-2842551b59ba/go.mod h1:Dfmfrd82N+csv0xFaASTU85wD5xsYNcH6RD/x+Bi32U=
 github.com/cenkalti/backoff/v4 v4.1.3 h1:cFAlzYUlVYDysBEH2T5hyJZMh3+5+WCBvSnK6Q8UtC4=
 github.com/cenkalti/backoff/v4 v4.1.3/go.mod h1:scbssz8iZGpm3xbr14ovlUdkxfGXNInqkPWOWmG2CLw=
 github.com/cenkalti/backoff/v4 v4.2.0 h1:HN5dHm3WBOgndBH6E8V0q2jIYIR3s9yglV8k/+MN3u4=
